@@ -1,0 +1,37 @@
+[Task]
+Evaluate the quality of this natural language query for describing an Excel cell range. Consider:
+
+1. Clarity (0-3): Is the purpose/use of the cell range unambiguous?
+2. Accuracy (0-3): Does the query correctly reflect the cell range's application (e.g., data processing, references)?
+3. Conciseness (0-2): Is it free of unnecessary details?
+4. Completeness (0-2): Are all the meanings of the cells included in the query?
+
+[Scoring Rubric]
+• 9-10: Perfectly describes the cell range's scope and purpose
+• 7-8: Minor inaccuracies or omissions
+• 5-6: Partial accuracy with vague references
+• <5: Fails to characterize the cell range
+
+[Input]
+Cell Range: {cell_range}
+Context: {context}
+Query: {query}
+
+[Output Format]
+Strict JSON:
+{{
+    "score": total_score,
+    "breakdown": {{
+        "clarity": score,
+        "accuracy": score,
+        "conciseness": score,
+        "completeness": score
+    }},
+    "rationale": "Brief explanation"
+}}
+
+IMPORTANT:
+1. Do NOT include any additional text before or after the JSON object.
+2. Ensure the JSON is valid and properly formatted.
+
+Here is the JSON output:

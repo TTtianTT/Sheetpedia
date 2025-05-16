@@ -1,0 +1,9 @@
+Now your turn,
+My Sheet Content:
+{sheet_string}
+
+The selected cell ranges: {range_info}
+
+Output Format: Please generate a query based on the selected cell ranges. The output should be provided in a JSON format, with a key of 'query' and the generated query as the corresponding value.
+
+Tell me the content in the selected cell ranges first and then generate the corresponding query, keep the query precise and concise.

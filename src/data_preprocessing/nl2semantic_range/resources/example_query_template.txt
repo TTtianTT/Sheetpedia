@@ -1,0 +1,5 @@
+Sheet Content:
+{sheet_string}
+
+Query:
+{query}

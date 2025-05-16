@@ -1,0 +1,37 @@
+{
+    "instruction": "As a data scientist, your task is to generate a formula based on a specific cell in a given spreadsheet. The query of the formula is provided. Use the spreadsheet and the query to generate the correct formula.",
+    "spreadsheet_data_format_description": "The sheet data will be provided to you in a format as follows: Each data cell in the spreadsheet is represented by a pair consisting of the cell address and cell content, separated by a comma, such as 'A1,Year'. This means that 'A1' is the cell's address, and 'Year' is its content. Cells are separated by a vertical bar ('|'), like 'A1,Year|A2,Profit'. The cell content can be empty, resulting in cell data like 'A1,|A2,Profit'. Cells are organized in row-major order, with different rows in the spreadsheet separated by line breaks. If there are merged cells in the sheet, they are split into multiple cells and only the first cell will be filled with content, other cells will be left as blank. You can visualize the sheet data as a matrix of cells. Following the matrix, all the merged cells are provided in the format '<upper-left address>:<lower-right address>,' like 'A3:C3', with each line representing one merged cell.",
+    "output_format": "Output Format: Please identify the data range and cell address that are related to the user query. Generate the formula based on the query. The output should be provided in a JSON format, enclosed in Json and markdown code blocks, with keys 'query' and 'formula'. The 'query' key should contain the user's query and the 'formula' key should contain the generated formula.",
+    "examples": [
+      {
+        "query": "Show me the total weight of all the criteria for project evaluation.",
+        "sheet_string": "A1,Criteria|B1,Weight|C1,Project 1|D1,Project 2|E1,Project 3|F1,Project 4\nA2,Supports key business objectives|B2,25%|C2,90|D2,90|E2,50|F2,20\nA3,Has strong internal sponsor|B3,15%|C3,70|D3,90|E3,50|F3,20\nA4,Has strong customer support|B4,15%|C4,50|D4,90|E4,50|F4,20\nA5,Realistic level of technology|B5,10%|C5,25|D5,90|E5,50|F5,70\nA6,Can be implemented in one year or less|B6,5%|C6,20|D6,20|E6,50|F6,90\nA7,Provides positive NPV|B7,20%|C7,50|D7,70|E7,50|F7,50\nA8,Has low risk in meeting scope, time, and cost goals|B8,10%|C8,20|D8,50|E8,50|F8,90\nA9,  Weighted Project Scores|B9,00%|C9,56|D9,78.5|E9,50|F9,41.5\nA10,|B10,|C10,|D10,|E10,|F10,\nA11,|B11,|C11,|D11,|E11,|F11,\nA12,|B12,|C12,|D12,|E12,|F12,\nA13,|B13,|C13,|D13,|E13,|F13,\nA14,|B14,|C14,|D14,|E14,|F14,\nA15,|B15,|C15,|D15,|E15,|F15,\nA16,|B16,|C16,|D16,|E16,|F16,\nA17,|B17,|C17,|D17,|E17,|F17,\nA18,|B18,|C18,|D18,|E18,|F18,\nA19,|B19,|C19,|D19,|E19,|F19,\nA20,|B20,|C20,|D20,|E20,|F20,\nA21,|B21,|C21,|D21,|E21,|F21,\nA22,|B22,|C22,|D22,|E22,|F22,\nA23,|B23,|C23,|D23,|E23,|F23,\nA24,|B24,|C24,|D24,|E24,|F24,\nA25,|B25,|C25,|D25,|E25,|F25,\nA26,|B26,|C26,|D26,|E26,|F26,\nA27,|B27,|C27,|D27,|E27,|F27,\nA28,|B28,|C28,|D28,|E28,|F28,\nA29,|B29,|C29,|D29,|E29,|F29,",
+        "formula": "=SUM(B2:B8)",
+        "text": "1",
+        "address": "B9"
+      },
+      {
+        "sheet_string": "A1,|B1,|C1,|D1,\nA2,|B2,|C2,|D2,\nA3,MARAC Yearly Totals: Milton Keynes|B3,|C3,|D3,\nA4,|B4,|C4,|D4,\nA5,|B5,2010/11|C5,2011/12|D5,2012/13\nA6,Cases reviewed|B6,210|C6,234|D6,245\nA7,Repeat cases|B7,23|C7,45|D7,67\nA8,Repeat rate|B8,|C8,|D8,\nA9,|B9,|C9,|D9,\nA10,|B10,|C10,|D10,\nA11,% Repeat rate of domestic violence incidence|B11,|C11,|D11,",
+        "formula": "=B7/B6",
+        "text": "",
+        "address": "B8",
+        "query": "The repeat case rate of domestic violence in 2010/11."
+      },
+      {
+        "sheet_string": "A1,Date|B1,CAA at Check 13|C1,\nA2,4/6/2014|B2,12.34|C2,\nA3,4/7/2014|B3,23.45|C3,74.2\nA4,4/8/2014|B4,34.56|C4,94.2\nA5,4/9/2014|B5,45.67|C5,114.2\nA6,4/10/2014|B6,56.78|C6,134.2\nA7,4/11/2014|B7,67.89|C7,154.2\nA8,4/12/2014|B8,98.76|C8,209.8\nA9,4/13/2014|B9,87.65|C9,189.8\nA10,4/14/2014|B10,76.54|C10,169.8\nA11,4/15/2014|B11,65.43|C11,149.8\nA12,4/16/2014|B12,54.32|C12,129.8\nA13,4/17/2014|B13,32.1|C13,89.8\nA14,4/18/2014|B14,21.09|C14,70\nA15,4/19/2014|B15,|C15,\nA16,4/20/2014|B16,|C16,\nA17,4/21/2014|B17,|C17,\nA18,4/22/2014|B18,10.98|C18,\nA19,4/23/2014|B19,98.76|C19,209.8\nA20,4/24/2014|B20,87.65|C20,189.8\nA21,4/25/2014|B21,76.54|C21,169.8\nA22,4/26/2014|B22,65.43|C22,149.8\nA23,4/27/2014|B23,54.32|C23,129.8\nA24,4/28/2014|B24,43.21|C24,109.8\nA25,4/29/2014|B25,32.1|C25,89.8\nA26,4/30/2014|B26,10.98|C26,51.8\nA27,5/1/2014|B27,12.34|C27,54.2\nA28,5/2/2014|B28,23.45|C28,74.2\nA29,5/3/2014|B29,34.56|C29,94.2\nA30,5/4/2014|B30,45.67|C30,114.2",
+        "formula": "=IF(B2>0,32+9*B2/5,NA())",
+        "text": "",
+        "address": "C2",
+        "query": "Convert the temperature from Celsius to Fahrenheit in Date 4/6/2014 if the Celsius temperature is greater than 0, otherwise mark it as 'NA'."
+      }
+    ],
+    "cot_examples": [
+      {
+        "query": "Show me the total weight of all the criteria for project evaluation.",
+        "sheet_string": "A1,Criteria|B1,Weight|C1,Project 1|D1,Project 2|E1,Project 3|F1,Project 4\nA2,Supports key business objectives|B2,25%|C2,90|D2,90|E2,50|F2,20\nA3,Has strong internal sponsor|B3,15%|C3,70|D3,90|E3,50|F3,20\nA4,Has strong customer support|B4,15%|C4,50|D4,90|E4,50|F4,20\nA5,Realistic level of technology|B5,10%|C5,25|D5,90|E5,50|F5,70\nA6,Can be implemented in one year or less|B6,5%|C6,20|D6,20|E6,50|F6,90\nA7,Provides positive NPV|B7,20%|C7,50|D7,70|E7,50|F7,50\nA8,Has low risk in meeting scope, time, and cost goals|B8,10%|C8,20|D8,50|E8,50|F8,90\nA9,  Weighted Project Scores|B9,|C9,56|D9,78.5|E9,50|F9,41.5\nA10,|B10,|C10,|D10,|E10,|F10,\nA11,|B11,|C11,|D11,|E11,|F11,\nA12,|B12,|C12,|D12,|E12,|F12,\nA13,|B13,|C13,|D13,|E13,|F13,\nA14,|B14,|C14,|D14,|E14,|F14,\nA15,|B15,|C15,|D15,|E15,|F15,\nA16,|B16,|C16,|D16,|E16,|F16,\nA17,|B17,|C17,|D17,|E17,|F17,\nA18,|B18,|C18,|D18,|E18,|F18,\nA19,|B19,|C19,|D19,|E19,|F19,\nA20,|B20,|C20,|D20,|E20,|F20,\nA21,|B21,|C21,|D21,|E21,|F21,\nA22,|B22,|C22,|D22,|E22,|F22,\nA23,|B23,|C23,|D23,|E23,|F23,\nA24,|B24,|C24,|D24,|E24,|F24,\nA25,|B25,|C25,|D25,|E25,|F25,\nA26,|B26,|C26,|D26,|E26,|F26,\nA27,|B27,|C27,|D27,|E27,|F27,\nA28,|B28,|C28,|D28,|E28,|F28,\nA29,|B29,|C29,|D29,|E29,|F29,",
+        "formula": "=SUM(B2:B8)",
+        "text": "1",
+        "address": "B9"
+      }
+    ]
+  }
