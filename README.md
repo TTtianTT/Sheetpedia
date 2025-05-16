@@ -1,4 +1,4 @@
-# Sheetpedia
+# Sheetpedia -- Train/Val/Test Set Generation & Test Set Usage
 • `src/`: Main Python source code.
 
 
