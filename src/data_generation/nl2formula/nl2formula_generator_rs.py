@@ -308,8 +308,8 @@ class NewNL2FormulaGenerator:
 if __name__ == '__main__':
     generator = NewNL2FormulaGenerator(
         api_request_limit=120,
-        json_directory="data/raw/raw_data_json_0219_processed",
-        processed_file_path='data/interim/task_specific/nl2formula/nl2formula_0322_0shot.jsonl',
+        json_directory="data/json_folder",
+        processed_file_path='data/nl2formula_xxxx_0shot.jsonl',
         generation_model="anthropic/claude-3.7-sonnet",
         generation_max_tokens=512,
         generation_temperature=0.7,

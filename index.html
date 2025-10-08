@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheetpedia: A 300K-Spreadsheet Corpus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">Sheetpedia</h1>
+            <h2 class="subtitle">A 300K-Spreadsheet Corpus for Spreadsheet Intelligence and LLM Fine-Tuning</h2>
+            
+            <p class="authors">
+                <a href="https://tttiantt.github.io/" target="_blank" rel="noopener noreferrer">Zailong Tian</a><sup>1,2</sup>, 
+                <a href="https://hzh030430.github.io/" target="_blank" rel="noopener noreferrer">Zhuoheng Han<sup>2</sup>, 
+                <a href="https://scholar.google.com/citations?hl=en&user=YCX4y1gAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Houfeng Wang</a><sup>2*</sup>, 
+                <a href="https://liziliao.github.io/" target="_blank" rel="noopener noreferrer">Lizi Liao</a><sup>1</sup>
+            </p>
+
+            <div class="affiliations">
+                <span><sup>1</sup>Singapore Management University</span>
+                <span><sup>2</sup>Peking University</span>
+            </div>
+
+            <div class="logo-container">
+                <img src="assets/SMU-logo.png" alt="SMU Logo" class="logo">
+                <img src="assets/PKU-logo.png" alt="Peking University Logo" class="logo">
+            </div>
+            
+            <div class="conference-note">
+                Accepted to <strong>NeurIPS 2025</strong> (Spotlight, DB track)
+            </div>
+
+            <nav>
+                <a href="https://openreview.net/forum?id=4vLYwlA3X5" class="button">📄 PDF</a>
+                <a href="https://github.com/TTtianTT/Sheetpedia" class="button">💻 Code</a>
+                <a href="https://huggingface.co/datasets/tianzl66/Sheetpedia_xlsx" class="button">💾 Dataset</a>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="intro-section">
+                <p class="intro-text">
+                    Spreadsheets are everywhere, but AI struggles to understand their complex mix of data and formulas. We introduce <strong>Sheetpedia</strong>, a new, massive corpus of over <strong>290,000 real-world spreadsheets</strong> designed to tackle this challenge. To demonstrate its power, we created two new tasks—translating natural language to cell ranges (NL2SR) and formulas (NL2Formula)—and fine-tuned models on our dataset to achieve state-of-the-art results, reaching <strong>97.5%</strong> and <strong>71.7%</strong> accuracy, respectively. Sheetpedia fills a crucial gap, paving the way for smarter, more intuitive spreadsheet tools.
+                </p>
+            </section>
+
+            <section id="data-statistics">
+                <h2>A Glimpse into the Corpus</h2>
+                <div class="figure-grid centered-flex-grid">
+                    <figure>
+                        <img src="assets/circle_rotated300.png" alt="Formula co-occurrence network">
+                        <figcaption>Formula Co-occurrence Network</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/wordcloud.png" alt="Word cloud of formula patterns">
+                        <figcaption>Formula Pattern Word Cloud</figcaption>
+                    </figure>
+                </div>
+            </section>
+            
+            <section id="tasks-results">
+                <h2>Putting Sheetpedia to the Test</h2>
+                 <div class="figure-grid vertical-grid">
+                    <figure>
+                        <img src="assets/data_sample.png" alt="Examples of the NL2SR and NL2Formula tasks">
+                        <figcaption>Task Examples: NL to Semantic Range & NL to Formula</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/heatmap_finetuning.png" alt="Heatmap of fine-tuning results">
+                        <figcaption>Fine-Tuning Performance on LLaMA-3.1-8B</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </main>
+        
+<footer>
+    <p>
+        For inquiries about this work, please contact 
+        <a href="https://tttiantt.github.io/" target="_blank" rel="noopener noreferrer">Zailong Tian</a> 
+        via his homepage.
+    </p>
+</footer>
+    </div>
+</body>
+</html>

@@ -319,7 +319,7 @@ class NL2SemanticRangeGenerator:
 if __name__ == '__main__':
     generator = NL2SemanticRangeGenerator(
         api_request_limit=2200,
-        json_directory="data/output_json_formula",
+        json_directory="data/json_folder",
         processed_file_path=None,
         generation_model="google/gemini-2.0-flash-001",
         generation_max_tokens=512,

@@ -1,0 +1,6 @@
+openai
+openpyxl
+pandas
+jsonlines
+scikit-learn
+tqdm

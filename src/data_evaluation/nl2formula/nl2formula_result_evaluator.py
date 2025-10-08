@@ -65,5 +65,5 @@ def evaluate_nl2formula(file_path):
         print(f"Failed to save results to file: {e}")
 
 if __name__ == '__main__':
-    file_path = "data/nl2formula_test_0shot_vanilla.jsonl"
+    file_path = "data/nl2formula_prediction_0shot.jsonl"
     evaluate_nl2formula(file_path)

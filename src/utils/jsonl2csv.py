@@ -18,6 +18,3 @@ def jsonl_to_csv(input_file):
     csv_file = os.path.splitext(input_file)[0] + '.csv'
     data.to_csv(csv_file, index=False)
     print(f'Successfully converted {input_file} to {csv_file}')
-
-if __name__ == '__main__':
-    jsonl_to_csv(r"C:\Users\v-zatian\PycharmProjects\SheetMontageUtility0510\SheetMontageUtility\src\data_generation\sheet_montage\chart2rt_results_1010_with_names.jsonl")

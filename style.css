@@ -1,0 +1,246 @@
+/* General Body & Font Styling */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    padding: 40px 50px;
+}
+
+/* Header & Title */
+header {
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-family: 'Source Serif 4', serif;
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #1a2533;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #5a6877;
+    margin: 10px 0 30px 0;
+}
+
+/* Authors & Affiliations */
+.authors {
+    font-size: 1.1em;
+    color: #34495e;
+    margin: 0 0 10px 0;
+}
+
+.authors a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.authors a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.affiliations {
+    font-size: 0.95em;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+.affiliations span {
+    margin: 0 10px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+.logo {
+    max-height: 55px; /* Increased logo size */
+    width: auto;
+}
+
+/* Conference & Navigation */
+.conference-note {
+    background-color: #fff4e5; /* A light orange/gold background */
+    color: #d35400; /* A strong orange text color */
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 22px;
+    border: 1px solid #f39c12; /* A matching border */
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.conference-note strong {
+    color: #c0392b; /* A darker red for emphasis */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button {
+    font-size: 1em;
+    font-weight: 600;
+    padding: 12px 24px;
+    background-color: #34495e;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2c3e50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content & Sections */
+.intro-section {
+    padding: 20px 0;
+}
+
+.intro-text {
+    font-size: 1.25em;
+    text-align: left; /* Changed to left-align for paragraph style */
+    line-height: 1.8;
+    color: #34495e;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+}
+
+/* Highlighted key numbers */
+strong {
+    color: #2980b9;
+    font-weight: 700;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 2.2em;
+    text-align: center;
+    color: #1a2533;
+    margin-bottom: 30px;
+}
+
+/* Figures and Grid Layout */
+.figure-grid {
+    display: grid;
+    gap: 30px;
+    align-items: start;
+}
+
+/* NEW: Flexbox layout for horizontally aligned figures */
+.centered-flex-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 30px;
+}
+
+.centered-flex-grid figure {
+    flex: 1; /* Allows figures to share space */
+    min-width: 300px; /* Prevents figures from becoming too small */
+    max-width: 450px;
+}
+
+.vertical-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for vertical layout */
+    justify-items: center;
+}
+
+.vertical-grid figure {
+    max-width: 80%; /* Control the max width in vertical layout */
+}
+
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+figcaption {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #95a5a6;
+    margin-top: 40px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 30px;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .title {
+        font-size: 2.5em;
+    }
+    .subtitle {
+        font-size: 1.2em;
+    }
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .vertical-grid figure {
+        max-width: 100%;
+    }
+}

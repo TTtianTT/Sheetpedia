@@ -141,9 +141,9 @@ if __name__ == "__main__":
 
     for config in config_list:
         num_shot = config["num_shot"]
-        output_file_path = f'data/processed/nl2formula/nl2formula_testset_{num_shot}shot.jsonl'
+        output_file_path = f'data/nl2formula_{num_shot}shot.jsonl'
         preprocessor = NL2FormulaPreprocessor(
-            input_file_path='data/interim/task_specific/nl2formula/nl2formula_rs_2025-03-23_19-20.jsonl',
+            input_file_path='data/nl2formula_rs.jsonl',
             output_file_path=output_file_path,
             num_shot=num_shot)
         preprocessor.preprocess_and_split_data()

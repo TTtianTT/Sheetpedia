@@ -124,18 +124,18 @@ class NL2SemanticRangePreprocessor:
 
 
 if __name__ == "__main__":
-    input_file_path = 'data/interim/task_specific/nl2semantic_range/nl2semantic_range_rs_2025-03-23_20-18.jsonl'
+    input_file_path = 'data/nl2semantic_range_rs.jsonl'
 
     config_list = [
         {"num_shot": 0},
         {"num_shot": 1},
-        # {"num_shot": 2},
+        {"num_shot": 2},
         {"num_shot": 3},
     ]
 
     for config in config_list:
         num_shot = config["num_shot"]
-        output_file_path = f'data/processed/nl2semantic_range/nl2semantic_range_testset_{num_shot}shot.jsonl'
+        output_file_path = f'data/nl2semantic_range_{num_shot}shot.jsonl'
 
         print(f"\nProcessing {num_shot}-shot configuration...")
         preprocessor = NL2SemanticRangePreprocessor(

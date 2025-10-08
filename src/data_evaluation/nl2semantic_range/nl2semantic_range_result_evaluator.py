@@ -1,7 +1,6 @@
 import json
 import re
 
-
 def evaluate_nl2semantic_range(file_path):
     total_count = 0
     correct_count = 0
@@ -43,6 +42,6 @@ def evaluate_nl2semantic_range(file_path):
         print("No data found in the file.")
 
 if __name__ == '__main__':
-    file_path = "data/nl2SR_test.jsonl"
+    file_path = "data/nl2SR_prediction_0shot.jsonl"
 
     evaluate_nl2semantic_range(file_path)

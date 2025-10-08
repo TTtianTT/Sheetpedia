@@ -1,4 +1,6 @@
-
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from openai import OpenAI
 def request_and_log_api_openrouter(messages, model, max_tokens, temperature=0.0, max_retries=1, retry_delay=5):
     """
     New OpenRouter-based implementation for requesting and logging API.
@@ -56,9 +58,6 @@ def request_and_log_api_openrouter(messages, model, max_tokens, temperature=0.0,
 
     return None  # Return None if all retries fail
 
-import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from openai import OpenAI
 
 def request_and_log_api_openrouter_parallel(messages, model, max_tokens, temperature=0.0, max_retries=1, retry_delay=5, concurrency=1):
     """
