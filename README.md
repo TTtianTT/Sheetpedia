@@ -1,7 +1,7 @@
 # Sheetpedia: A 300K-Spreadsheet Corpus for Spreadsheet Intelligence and LLM Fine-Tuning
-
-[![Hugging Face](https://img.shields.io/badge/🤗%20Dataset-Hugging%20Face-yellow)](https://huggingface.co/datasets/tianzl66/Sheetpedia_xlsx)
+[![Project Page](https://img.shields.io/badge/🌐%20Project-Page-brightgreen)](https://tttiantt.github.io/Sheetpedia/)
 [![PDF](https://img.shields.io/badge/📄%20Paper-PDF-red)](https://openreview.net/forum?id=4vLYwlA3X5)
+[![Hugging Face](https://img.shields.io/badge/🤗%20Dataset-Hugging%20Face-yellow)](https://huggingface.co/datasets/tianzl66/Sheetpedia_xlsx)
 [![Code](https://img.shields.io/badge/💻%20Code-GitHub-blue)](https://github.com/TTtianTT/Sheetpedia)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
