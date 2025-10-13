@@ -12,7 +12,7 @@ This repository contains the official code and resources for **Sheetpedia**, a l
 
 [Zailong Tian](https://tttiantt.github.io/), [Zhuoheng Han](https://hzh030430.github.io/), [Houfeng Wang](https://scholar.google.com/citations?hl=en&user=YCX4y1gAAAAJ&view_op=list_works&sortby=pubdate), [Lizi Liao](https://liziliao.github.io/)
 
-*Singapore Management University & Peking University*
+*Peking University & Singapore Management University*
 
 ## Introduction
 
